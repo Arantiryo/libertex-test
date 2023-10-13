@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import welcomeImage from '../../public/welcome-image.png';
+import bgImage from '../../public/bg.jpeg';
+import Button from './Button.astro';
+
+// import { Icon } from 'astro-icon'
+
+// TODO: - implement orange triangle
+//       - replace fonts
+---
+
+<div class="relative overflow-hidden">
+  <Image class="absolute h-full w-full" src={bgImage} alt="Background image" />
+  <section class="relative px-5">
+    <h1 class="text-h1-sm mb-3 pt-6 text-center">
+      <span class="text-orange">CFD Trading</span>
+      <br /> For All Traders
+    </h1>
+    <h2 class="text-h2-sm mb-4 text-center">Discover everything you need to trade in one place.</h2>
+    <div class="mb-2"><Button text="get started" /></div>
+    <p class="mb-2 text-center text-sm italic">77.77% of retail investor accounts lose money</p>
+    <div class="mb-4 flex justify-center">
+      <a class="text-orange text-link-sm cursor-pointer" href="/">I already have an account</a>
+    </div>
+    <img
+      src={welcomeImage.src}
+      width={welcomeImage.width}
+      height={welcomeImage.height}
+      alt="Trading terminal phone app"
+    />
+    <!-- <Image
+      class="bg-transparent"
+      src={welcomeImage}
+      quality={'max'}
+      alt="Trading terminal phone app"
+    /> -->
+  </section>
+</div>
+
+<!-- 
+width={280}
+    height={280} -->
