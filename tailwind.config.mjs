@@ -11,6 +11,22 @@ export default {
         },
       ],
       'h2-sm': [
+        '24px',
+        {
+          lineHeight: '30.67px',
+          letterSpacing: '1%',
+          fontWeight: 700,
+        },
+      ],
+      'h3-sm': [
+        '18px',
+        {
+          lineHeight: '23px',
+          letterSpacing: '1%',
+          fontWeight: 700,
+        },
+      ],
+      'h4-sm': [
         '14px',
         {
           lineHeight: '20px',
@@ -33,6 +49,13 @@ export default {
           fontWeight: 800,
         },
       ],
+      base: [
+        '12px',
+        {
+          lineHeight: '16px',
+          fontWeight: 600,
+        },
+      ],
       'link-sm': [
         '12px',
         {
@@ -52,6 +75,8 @@ export default {
         black: '#000000',
         nero: '#1A1A1A',
         orange: '#FF6633',
+        'white-smoke': '#F5F5F5',
+        gray: '#606264',
       },
       fontFamily: {
         mont: ['"Mont"', 'sans-serif'],
