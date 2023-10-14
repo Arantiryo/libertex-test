@@ -56,6 +56,20 @@ export default {
           fontWeight: 600,
         },
       ],
+      title: [
+        '18px',
+        {
+          lineHeight: '24px',
+          fontWeight: 700,
+        },
+      ],
+      large: [
+        '16px',
+        {
+          lineHeight: '24px',
+          fontWeight: 700,
+        },
+      ],
       'link-sm': [
         '12px',
         {

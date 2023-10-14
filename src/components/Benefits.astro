@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import bgImage from '../../public/bg.jpeg';
+import Card from './Card.astro';
+import Button from './Button.astro';
+---
+
+<div class="relative overflow-hidden">
+  <Image class="absolute h-full w-full" src={bgImage} alt="Background image" />
+  <section class="bg-white-smoke relative px-5 py-10">
+    <h2 class="text-h2-sm mb-2 text-center">Libertex™ is a platform designed for you</h2>
+    <p class="text-large mb-6 text-center">For Beginners and Professionals</p>
+    <div class="mb-6 flex flex-wrap items-center justify-center gap-5">
+      <Card
+        img="card-1"
+        title="Award-Winning Platform"
+        body="The platform combines good trading conditions, fast order execution speeds, a user-friendly interface, and online support."
+      />
+      <Card
+        img="card-2"
+        title="Trader Education Centre"
+        body="Learn the skills you need to open, modify and close trades, as well as trading strategies and the basic features of our platform."
+      />
+      <Card
+        img="card-3"
+        title="Risk-Protection & Management Tools"
+        body="Use our risk management tools to hedge and plan your trades for market changes."
+      />
+    </div>
+    <div class="mb-2"><Button text="JOIN LIBERTEX™" /></div>
+    <p class="mb-2 text-center text-sm italic">77.77% of retail investor accounts lose money</p>
+  </section>
+</div>

@@ -1,21 +1,19 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
   title: string;
   body: string;
-  href: string;
+  img: string;
 }
 
-const { href, title, body } = Astro.props;
+const { img, title, body } = Astro.props;
 ---
 
-<li class="link-card">
-  <a href={href}>
-    <h2>
-      {title}
-      <span>&rarr;</span>
-    </h2>
-    <p>
-      {body}
-    </p>
-  </a>
-</li>
+<div class="card-shadow w-full max-w-[440px] overflow-hidden rounded-[16px] bg-white">
+  <Image class="mb-5" src={import(`../../public/${img}.jpeg`)} alt="Card image" />
+  <div class="mb-[32px] px-5">
+    <h4 class="text-title mb-5 text-center">{title}</h4>
+    <p class="text-center text-base">{body}</p>
+  </div>
+</div>
