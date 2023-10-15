@@ -25,6 +25,14 @@ export default {
           fontWeight: 700,
         },
       ],
+      h2: [
+        '40px',
+        {
+          lineHeight: '48px',
+          letterSpacing: '0.01em',
+          fontWeight: 700,
+        },
+      ],
       'h3-sm': [
         '18px',
         {
@@ -104,7 +112,7 @@ export default {
         nero: '#1A1A1A',
         orange: '#FF6633',
         'white-smoke': '#F5F5F5',
-        gray: '#606264',
+        gray: '#666666',
       },
       fontFamily: {
         mont: ['"Mont"', 'sans-serif'],
