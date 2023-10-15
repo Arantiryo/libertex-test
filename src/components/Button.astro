@@ -1,13 +1,14 @@
 ---
 interface Props {
   text: string;
+  className?: string;
 }
 
-const { text } = Astro.props;
+const { text, className = '' } = Astro.props;
 ---
 
 <button
-  class="bg-orange text-button mx-auto mb-4 flex h-12 w-full
-    max-w-[372px] items-center justify-center rounded-[100px] uppercase text-white"
+  class={`bg-orange text-button mx-auto mb-4 flex h-12 w-full
+  max-w-[372px] items-center justify-center rounded-[100px] uppercase text-white ${className}`}
   >{text}</button
 >

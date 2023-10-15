@@ -14,7 +14,7 @@ export default {
         '24px',
         {
           lineHeight: '30.67px',
-          letterSpacing: '1%',
+          letterSpacing: '0.01em',
           fontWeight: 700,
         },
       ],
@@ -22,7 +22,7 @@ export default {
         '18px',
         {
           lineHeight: '23px',
-          letterSpacing: '1%',
+          letterSpacing: '0.01em',
           fontWeight: 700,
         },
       ],
@@ -30,7 +30,7 @@ export default {
         '14px',
         {
           lineHeight: '20px',
-          letterSpacing: '1%',
+          letterSpacing: '0.01em',
           fontWeight: 700,
         },
       ],
@@ -38,7 +38,7 @@ export default {
         '18px',
         {
           lineHeight: '18px',
-          letterSpacing: '3%',
+          letterSpacing: '0.03em',
           fontWeight: 700,
         },
       ],
