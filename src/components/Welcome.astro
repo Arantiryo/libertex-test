@@ -1,31 +1,48 @@
 ---
 import { Image } from 'astro:assets';
 import bgImage from '../../public/bg.jpeg';
+import bgImageLg from '../../public/bg-lg.jpeg';
 import welcomeImage from '../../public/welcome-image.png';
 import Button from './Button.astro';
+
+// TODO: fix bg blend mode
 ---
 
 <div class="relative overflow-hidden">
-  <Image class="absolute h-full w-full" src={bgImage} alt="Background image" />
-  <div class="welcome-shape absolute bottom-0 right-0"></div>
-  <section class="relative px-5 sm:px-8 md:px-10 lg:px-16 xl:px-5">
-    <h1 class="text-h1-sm mb-3 pt-6 text-center">
-      <span class="text-orange">CFD Trading</span>
-      <br /> For All Traders
-    </h1>
-    <h4 class="text-h4-sm mb-4 text-center">Discover everything you need to trade in one place.</h4>
-    <div class="mb-2"><Button text="get started" /></div>
-    <p class="mb-2 text-center text-sm italic">77.77% of retail investor accounts lose money</p>
-    <div class="mb-4 flex justify-center">
-      <a class="text-orange text-link-sm cursor-pointer" href="/">I already have an account</a>
+  <div class="">
+    <Image class="absolute h-full w-full lg:hidden" src={bgImage} alt="Background image" />
+    <Image class="absolute h-full w-full" src={bgImageLg} alt="Background image" />
+    <div class="welcome-shape absolute bottom-0 right-0 lg:hidden"></div>
+    <div class="welcome-shape-lg absolute bottom-0 right-0 hidden lg:block"></div>
+  </div>
+  <section class="relative px-5 sm:px-8 md:px-10 lg:flex lg:gap-8 lg:px-[130px]">
+    <div class="lg:flex lg:w-1/2 lg:min-w-[600px] lg:flex-col lg:items-start lg:py-20">
+      <h1 class="text-h1-sm lg:text-h1 mb-3 pt-6 text-center lg:mb-4 lg:pt-0 lg:text-left">
+        <span class="text-orange">CFD Trading</span>
+        <br /> For All Traders
+      </h1>
+      <h4 class="text-h4-sm lg:text-h4 mb-4 text-center lg:mb-12 lg:text-left">
+        Discover everything you need to trade in one place.
+      </h4>
+      <div class="mr-auto">
+        <Button className="!mb-2 lg:h-[64px] lg:w-[372px]" text="get started" />
+        <p class="mb-2 text-center text-sm italic lg:mb-4">
+          77.77% of retail investor accounts lose money
+        </p>
+        <div class="mb-4 flex justify-center">
+          <a class="text-orange text-link-sm cursor-pointer" href="/">I already have an account</a>
+        </div>
+      </div>
     </div>
-    <img
-      class="mx-auto"
-      src={welcomeImage.src}
-      width={welcomeImage.width}
-      height={welcomeImage.height}
-      alt="Trading terminal phone app"
-    />
+    <div class="lg:flex lg:w-1/2 lg:items-end">
+      <img
+        class="mx-auto"
+        src={welcomeImage.src}
+        width={welcomeImage.width}
+        height={welcomeImage.height}
+        alt="Trading terminal phone app"
+      />
+    </div>
     <!-- <Image class="mx-auto" src={welcomeImage} quality={'max'} alt="Trading terminal phone app" /> -->
   </section>
 </div>

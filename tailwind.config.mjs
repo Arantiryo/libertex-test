@@ -10,6 +10,13 @@ export default {
           fontWeight: 800,
         },
       ],
+      h1: [
+        '56px',
+        {
+          lineHeight: '64px',
+          fontWeight: 800,
+        },
+      ],
       'h2-sm': [
         '24px',
         {
@@ -31,6 +38,13 @@ export default {
         {
           lineHeight: '20px',
           letterSpacing: '0.01em',
+          fontWeight: 700,
+        },
+      ],
+      h4: [
+        '22px',
+        {
+          lineHeight: '28px',
           fontWeight: 700,
         },
       ],
