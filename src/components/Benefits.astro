@@ -1,15 +1,17 @@
 ---
 import { Image } from 'astro:assets';
-import bgImage from '../../public/bg.jpeg';
+import bgImage from '../../public/bg-benefits.jpeg';
 import Card from './Card.astro';
 import Button from './Button.astro';
 ---
 
 <div class="relative overflow-hidden">
   <Image class="absolute h-full w-full" src={bgImage} alt="Background image" />
-  <section class="bg-white-smoke relative px-5 py-10 sm:px-8 md:px-10 lg:px-16 xl:px-5">
-    <h2 class="text-h2-sm mb-2 text-center">Libertex™ is a platform designed for you</h2>
-    <p class="text-large mb-6 text-center">For Beginners and Professionals</p>
+  <section class="relative px-5 py-10 sm:px-8 md:px-10 lg:px-20 lg:py-[130px]">
+    <h2 class="text-h2-sm lg:text-h2 mb-2 text-center">
+      Libertex™ is a platform designed for you
+    </h2>
+    <p class="text-large lg:text-h4 mb-6 text-center lg:mb-12">For Beginners and Professionals</p>
     <div class="mb-6 flex flex-wrap items-center justify-center gap-5">
       <Card
         img="card-1"
@@ -18,6 +20,7 @@ import Button from './Button.astro';
       />
       <Card
         img="card-2"
+        isMirrored={true}
         title="Trader Education Centre"
         body="Learn the skills you need to open, modify and close trades, as well as trading strategies and the basic features of our platform."
       />
@@ -27,7 +30,9 @@ import Button from './Button.astro';
         body="Use our risk management tools to hedge and plan your trades for market changes."
       />
     </div>
-    <div class="mb-2"><Button text="JOIN LIBERTEX™" /></div>
-    <p class="mb-2 text-center text-sm italic">77.77% of retail investor accounts lose money</p>
+    <Button className="mb-2 lg:h-[72px] lg:text-[22px] lg:leading-[24px]" text="JOIN LIBERTEX™" />
+    <p class="mb-2 text-center text-sm italic lg:mb-0 lg:text-[14px] lg:leading-[14px]">
+      77.77% of retail investor accounts lose money
+    </p>
   </section>
 </div>

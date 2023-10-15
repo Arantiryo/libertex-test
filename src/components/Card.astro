@@ -5,15 +5,24 @@ interface Props {
   title: string;
   body: string;
   img: string;
+  isMirrored?: boolean;
 }
 
-const { img, title, body } = Astro.props;
+const { img, title, body, isMirrored = false } = Astro.props;
 ---
 
-<div class="card-shadow w-full max-w-[440px] overflow-hidden rounded-[16px] bg-white">
-  <Image class="mb-5" src={import(`../../public/${img}.jpeg`)} alt="Card image" />
-  <div class="mb-[32px] px-5">
-    <h4 class="text-title mb-5 text-center">{title}</h4>
-    <p class="text-center text-base">{body}</p>
+<div
+  class={`${
+    isMirrored ? 'flex-row-reverse' : ''
+  } card-shadow w-full max-w-[440px] overflow-hidden rounded-[16px] bg-white lg:flex lg:max-w-none lg:px-11 lg:py-12`}
+>
+  <Image
+    class="mb-5 lg:mb-0 lg:h-[180px] lg:w-[320px] lg:rounded-[16px]"
+    src={import(`../../public/${img}.jpeg`)}
+    alt="Card image"
+  />
+  <div class="mb-[32px] px-5 lg:mb-0 lg:flex lg:flex-col lg:items-start lg:justify-center">
+    <h4 class="text-title lg:text-title-lg mb-5 text-center lg:mb-8">{title}</h4>
+    <p class="lg:text-title text-center text-base lg:text-left lg:font-normal">{body}</p>
   </div>
 </div>

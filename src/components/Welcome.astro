@@ -9,9 +9,9 @@ import Button from './Button.astro';
 ---
 
 <div class="relative overflow-hidden">
-  <div class="">
+  <div>
     <Image class="absolute h-full w-full lg:hidden" src={bgImage} alt="Background image" />
-    <Image class="absolute h-full w-full" src={bgImageLg} alt="Background image" />
+    <Image class="absolute hidden h-full w-full lg:block" src={bgImageLg} alt="Background image" />
     <div class="welcome-shape absolute bottom-0 right-0 lg:hidden"></div>
     <div class="welcome-shape-lg absolute bottom-0 right-0 hidden lg:block"></div>
   </div>
@@ -25,7 +25,10 @@ import Button from './Button.astro';
         Discover everything you need to trade in one place.
       </h4>
       <div class="mr-auto">
-        <Button className="!mb-2 lg:h-[64px] lg:w-[372px]" text="get started" />
+        <Button
+          className="!mb-2 lg:h-[64px] lg:w-[372px] lg:text-[22px] lg:leading-[24px]"
+          text="get started"
+        />
         <p class="mb-2 text-center text-sm italic lg:mb-4 lg:text-[14px] lg:leading-[14px]">
           77.77% of retail investor accounts lose money
         </p>

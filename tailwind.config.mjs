@@ -85,6 +85,13 @@ export default {
           fontWeight: 700,
         },
       ],
+      'title-lg': [
+        '28px',
+        {
+          lineHeight: '36px',
+          fontWeight: 700,
+        },
+      ],
       large: [
         '16px',
         {
