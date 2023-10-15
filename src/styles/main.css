@@ -30,18 +30,6 @@
 }
 
 @layer components {
-  /* .welcome-bg {
-		background-image: url("../");
-	} */
-
-  /* .welcome-shape {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 246px 150vw;
-    border-color: transparent transparent #ff6633 transparent;
-  } */
-
   .welcome-shape {
     width: 0;
     height: 0;
@@ -54,7 +42,7 @@
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0 946px 60vw;
+    border-width: 0 0 1246px 52vw;
     border-color: transparent transparent #ff6633 transparent;
   }
 

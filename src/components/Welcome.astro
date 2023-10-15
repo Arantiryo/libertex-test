@@ -40,15 +40,20 @@ import Button from './Button.astro';
         </div>
       </div>
     </div>
-    <div class="lg:flex lg:w-1/2 lg:items-end">
-      <img
+    <div class="lg:flex lg:w-1/2 lg:items-end lg:pt-[34px]">
+      <!-- <img
         class="mx-auto"
         src={welcomeImage.src}
         width={welcomeImage.width}
         height={welcomeImage.height}
         alt="Trading terminal phone app"
+      /> -->
+      <Image
+        class="mx-auto lg:max-h-[472px] lg:max-w-[465px]"
+        src={welcomeImage}
+        quality={'max'}
+        alt="Trading terminal phone app"
       />
     </div>
-    <!-- <Image class="mx-auto" src={welcomeImage} quality={'max'} alt="Trading terminal phone app" /> -->
   </section>
 </div>
