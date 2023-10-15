@@ -3,8 +3,8 @@
 import { Accordion, AccordionItem } from 'accessible-astro-components';
 ---
 
-<section class="relative bg-white px-5 py-10 sm:px-8 md:px-10 lg:px-16 xl:px-5">
-  <h2 class="text-h2-sm mb-6">FAQ</h2>
+<section class="relative bg-white px-5 py-10 sm:px-8 md:px-10 lg:px-[130px] lg:py-20">
+  <h2 class="text-h2-sm lg:text-h2 mb-6 lg:mb-16">FAQ</h2>
   <Accordion>
     <AccordionItem header="What is CFD Trading?">
       <p>
@@ -29,13 +29,13 @@ import { Accordion, AccordionItem } from 'accessible-astro-components';
       </p>
     </AccordionItem>
     <AccordionItem header="What does “leverage” mean in the context of CFD trading?">
-      <p class="mb-4">
+      <p class="mb-4 lg:mb-6">
         In CFD trading, leverage refers to the concept of controlling or gaining exposure to a large
         position using a relatively small amount of capital. This allows traders to maximise their
         trading volume. However, it's crucial to remember that while leverage can increase profits,
         it can also magnify losses. Here's a deeper dive into the concept:
       </p>
-      <ol class="list-decimal">
+      <ol class="ml-4 list-outside list-decimal">
         <li>
           <b>Leverage Ratio:</b> Presented as a ratio, such as 10:1, it indicates the multiple of
           exposure you can have compared to your account balance. For instance, with 10:1 leverage,
@@ -59,8 +59,18 @@ import { Accordion, AccordionItem } from 'accessible-astro-components';
   .accordion__item:last-of-type .accordion__panel,
   .accordion__panel,
   .is-active .accordion__header,
-  .accordion__item.is-active .accordion__header {
+  .accordion__item.is-active .accordion__header,
+  .panel__inner {
     border: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .panel__inner {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 32px;
   }
 
   .accordion__item .accordion__header,
@@ -68,15 +78,6 @@ import { Accordion, AccordionItem } from 'accessible-astro-components';
   .accordion__item:last-of-type .accordion__header,
   .accordion__item:last-of-type .accordion__panel {
     border-bottom: 1px dashed rgba(176, 176, 176, 1);
-  }
-
-  .header__toggle-indicator {
-    min-width: 24px;
-    padding: 4px;
-    margin-left: 5px;
-    color: #ff6633;
-    border-radius: 100%;
-    background-color: #f5f5f5;
   }
 
   .accordion__header {
@@ -93,8 +94,36 @@ import { Accordion, AccordionItem } from 'accessible-astro-components';
     text-align: left;
   }
 
-  .panel__inner {
-    padding-top: 16px;
-    padding-right: 40px;
+  .header__toggle-indicator {
+    min-width: 24px;
+    padding: 4px;
+    margin-left: 5px;
+    color: #ff6633;
+    border-radius: 100%;
+    background-color: #f5f5f5;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .accordion__header {
+      font-size: 24px;
+      line-height: 30.67px;
+    }
+
+    .accordion__panel {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .panel__inner {
+      padding-top: 24px;
+      padding-bottom: 24px;
+      padding-right: 48px;
+    }
+
+    .header__toggle-indicator {
+      min-width: 28spx;
+      padding: 6px;
+      margin-left: 5px;
+    }
   }
 </style>
