@@ -3,27 +3,29 @@ import { Icon } from 'astro-icon';
 import Button from './Button.astro';
 ---
 
-<header
-  class="bg-nero flex w-full items-center justify-center px-5 py-[6px] lg:h-[72px] lg:px-[130px]"
->
-  <Icon class="max-w-[102px] lg:hidden" name="main-logo" />
-  <div class="hidden lg:flex lg:w-full lg:items-center lg:justify-between">
-    <div class="flex">
-      <div class="border-r-[0.5px] border-white py-[9px] pr-5">
-        <Icon class="mb-[10px] max-w-[140px]" name="main-logo" />
-        <p class="text-center text-[8px] text-white">Official online trading partner</p>
+<div class="bg-nero flex justify-center">
+  <header
+    class="mx-autopx-5 flex w-full max-w-[1220px] items-center justify-center py-[6px] lg:h-[72px] lg:px-[20px]"
+  >
+    <Icon class="max-w-[102px] lg:hidden" name="main-logo" />
+    <div class="hidden lg:flex lg:w-full lg:items-center lg:justify-between">
+      <div class="flex">
+        <div class="border-r-[0.5px] border-white py-[9px] pr-5">
+          <Icon class="mb-[10px] max-w-[140px]" name="main-logo" />
+          <p class="text-center text-[8px] text-white">Official online trading partner</p>
+        </div>
+        <Icon class="h-[56px] min-w-[56px] pl-5" name="bayern" />
       </div>
-      <Icon class="h-[56px] min-w-[56px] pl-5" name="bayern" />
+      <p class="h2-sm leading-[20px] text-white">#TradeForMore</p>
+      <div>
+        <Button
+          className="!text-orange border-orange !mb-1 !h-10 border-2 !bg-black"
+          text="get started"
+        />
+        <p class="text-center text-sm italic text-white">
+          77.77% of retail investor accounts lose money
+        </p>
+      </div>
     </div>
-    <p class="h2-sm leading-[20px] text-white">#TradeForMore</p>
-    <div>
-      <Button
-        className="!text-orange border-orange !mb-1 !h-10 border-2 !bg-black"
-        text="get started"
-      />
-      <p class="text-center text-sm italic text-white">
-        77.77% of retail investor accounts lose money
-      </p>
-    </div>
-  </div>
-</header>
+  </header>
+</div>

@@ -7,12 +7,14 @@ import Button from './Button.astro';
 
 <div class="relative overflow-hidden">
   <Image class="absolute h-full w-full" src={bgImage} alt="Background image" />
-  <section class="relative px-5 py-10 sm:px-8 md:px-10 lg:px-20 lg:py-[130px]">
+  <section
+    class="relative mx-auto max-w-[1220px] px-5 py-10 sm:px-8 md:px-10 lg:px-[20px] lg:py-20"
+  >
     <h2 class="text-h2-sm lg:text-h2 mb-2 text-center">
       Libertex™ is a platform designed for you
     </h2>
     <p class="text-large lg:text-h4 mb-6 text-center lg:mb-12">For Beginners and Professionals</p>
-    <div class="mb-6 flex flex-wrap items-center justify-center gap-5">
+    <div class="mb-6 flex flex-wrap items-center justify-center gap-5 lg:mb-10 lg:gap-8">
       <Card
         img="card-1"
         title="Award-Winning Platform"
