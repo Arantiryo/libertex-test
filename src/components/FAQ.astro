@@ -1,0 +1,100 @@
+---
+// import { Icon } from 'astro-icon';
+import { Accordion, AccordionItem } from 'accessible-astro-components';
+---
+
+<section class="relative bg-white px-5 py-10">
+  <h2 class="text-h2-sm mb-6">FAQ</h2>
+  <Accordion>
+    <AccordionItem header="What is CFD Trading?">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui
+        in quo accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem
+        quibusdam quod veritatis laboriosam est tenetur.
+      </p>
+      <a href="#">Tab to me!</a>
+    </AccordionItem>
+    <AccordionItem header="How does CFD trading differ from traditional trading?">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui
+        in quo accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem
+        quibusdam quod veritatis laboriosam est tenetur.
+      </p>
+    </AccordionItem>
+    <AccordionItem header="How do CFDs work?">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui
+        in quo accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem
+        quibusdam quod veritatis laboriosam est tenetur.
+      </p>
+    </AccordionItem>
+    <AccordionItem header="What does “leverage” mean in the context of CFD trading?">
+      <p class="mb-4">
+        In CFD trading, leverage refers to the concept of controlling or gaining exposure to a large
+        position using a relatively small amount of capital. This allows traders to maximise their
+        trading volume. However, it's crucial to remember that while leverage can increase profits,
+        it can also magnify losses. Here's a deeper dive into the concept:
+      </p>
+      <ol class="list-decimal">
+        <li>
+          <b>Leverage Ratio:</b> Presented as a ratio, such as 10:1, it indicates the multiple of
+          exposure you can have compared to your account balance. For instance, with 10:1 leverage,
+          a $1,000 deposit can provide exposure to a $10,000 position. Libertex™ offers leverage of
+          up to 30:1 for retail clients.
+        </li>
+        <li>
+          <b>Margin:</b> This is the percentage of the full value of the trade that you need to
+          deposit to open a leveraged position. For example, if you want to open a position worth
+          $10,000 and the margin requirement is 10%, you would need $1,000 in your account.
+        </li>
+      </ol>
+    </AccordionItem>
+  </Accordion>
+</section>
+
+<style is:global>
+  .accordion__item,
+  .accordion__header,
+  .accordion__item:last-of-type .accordion__header,
+  .accordion__item:last-of-type .accordion__panel,
+  .accordion__panel,
+  .is-active .accordion__header,
+  .accordion__item.is-active .accordion__header {
+    border: none;
+  }
+
+  .accordion__item .accordion__header,
+  .is-active .accordion__panel,
+  .accordion__item:last-of-type .accordion__header,
+  .accordion__item:last-of-type .accordion__panel {
+    border-bottom: 1px dashed rgba(176, 176, 176, 1);
+  }
+
+  .header__toggle-indicator {
+    min-width: 24px;
+    padding: 4px;
+    margin-left: 5px;
+    color: #ff6633;
+    border-radius: 100%;
+    background-color: #f5f5f5;
+  }
+
+  .accordion__header {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .accordion__panel {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  .panel__inner {
+    padding-top: 16px;
+    padding-right: 40px;
+  }
+</style>
